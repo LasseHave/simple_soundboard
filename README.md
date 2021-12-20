@@ -19,6 +19,8 @@ project
 
 Pressing "a" will then play a_test.mp3.
 
+It is highly recommended only to use sounds up to 10 seconds!
+
 ## Getting started
 ### Windows
 Run the command to install python and pip through chocolatey, if not already installed:
@@ -41,3 +43,5 @@ python .\main.py
 Due to koda the sound folder is not very packed. But some ideas to create a nice board could be:
  - h for hallelujah: https://www.youtube.com/watch?v=nsBByTiKfyY, when the problem you have been trying to solve for 2 days is suddenly gone :-)
  - b for ba dum tss: https://www.youtube.com/watch?v=6zXDo4dL7SU, when someone is telling a "perfect bad" joke.
+
+ How you get the youtube sounds is completely up to you. You can use other sources as well. Pygame should include most audio formats.
