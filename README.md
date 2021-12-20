@@ -1,6 +1,7 @@
 # Soundboard
 
-A good team artifact to have present in a room of developers. Use with your own sounds!
+A good team artifact to have present in a room of developers. Use with your own sounds dependent on the team humor!
+With inspiration from the almighty CANDI team, and published by BNJ software (https://www.linkedin.com/posts/it-minds_4-tips-til-en-produktiv-udviklingsproces-activity-6872113379411013632-krpk)
 
 A simple python application that takes a sound (from the sounds folder) started with a letter typed on the keyboard, and plays it. E.g.
 
