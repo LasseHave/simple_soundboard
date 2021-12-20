@@ -40,6 +40,11 @@ Run the application:
 python .\main.py
 ```
 
+## Deployment
+To get started in your office you will need to run the script and sounds on a raspberry pi and connect a lightweight speaker.
+Create a script that auto starts the main file on boot of the raspberry pi.
+More to follow...
+
 ## Sound ideas
 Due to koda the sound folder is not very packed. But some ideas to create a nice board could be:
  - h for hallelujah: https://www.youtube.com/watch?v=nsBByTiKfyY, when the problem you have been trying to solve for 2 days is suddenly gone :-)
