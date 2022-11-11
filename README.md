@@ -1,4 +1,4 @@
-# Soundboard
+ # Soundboard
 
 A good team artifact to have present in a room of developers. Use with your own sounds!
 
@@ -45,3 +45,56 @@ Due to koda the sound folder is not very packed. But some ideas to create a nice
  - b for ba dum tss: https://www.youtube.com/watch?v=6zXDo4dL7SU, when someone is telling a "perfect bad" joke.
 
  How you get the youtube sounds is completely up to you. You can use other sources as well. Pygame should include most audio formats.
+
+ ## Setup a Raspberry Pi to run the script
+
+ Before starting, run the commands to setup the python environment:
+ ```sh
+$ pip install readchar
+
+```
+ This guide is tested and verified on a Raspberry Pi 3 with Raspberry Pi OS Released on 09-22-2022 (32 bit) 
+ https://www.raspberrypi-spy.co.uk/2014/05/how-to-mount-a-usb-flash-disk-on-the-raspberry-pi/
+
+List the usb drives mounted
+ ```sh
+$  ls -l /dev/disk/by-uuid/
+
+```
+Be  aware that the UUID found here will need to be put in the basepath of the main.py script.
+
+Create a USB drive mount path
+ ```sh
+$ sudo mkdir /media/usb
+
+```
+
+Make sure the user has access to the folder 
+ ```sh
+$ sudo chown -R pi:pi /media/usb
+
+```
+
+To mount automaticallt 
+ ```sh
+$ sudo nano /etc/fstab
+
+```
+
+In the bottom of the file, add:
+UUID={UUID OF DRIVE} /media/usb vfat defaults 0 2
+
+ And the to run the main.py on boot, follow the steps in:  https://raspberrypi-guide.github.io/programming/run-script-on-boot
+
+ ```sh
+$  sudo nano /home/pi/.bashrc
+
+```
+
+Add the lines:
+
+ ```sh
+$ echo Running awesome script
+$ sudo python /home/usb/main.py
+```
+

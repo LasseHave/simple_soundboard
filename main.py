@@ -3,9 +3,9 @@ from os import listdir
 import time
 import pygame
 
-
+basepath = "/media/UUID-OF-DRIVE/"
 def playStartSound():
-	pygame.mixer.music.load("startup.mp3")
+	pygame.mixer.music.load(basepath + "startup.mp3")
 	time.sleep(4)
 	pygame.mixer.music.play()
 
@@ -15,7 +15,7 @@ def playSound(key):
 
 		toPlay = [filename for filename in names if filename.startswith(key)]
 		if pygame.mixer.music.get_busy() == False:
-			pygame.mixer.music.load("sounds/" + toPlay[0])
+			pygame.mixer.music.load(basepath + "sounds/" + toPlay[0])
 			pygame.mixer.music.play()
 	except:
 		print("The key " + key + " does not have a sound")
@@ -24,8 +24,7 @@ def playSound(key):
 
 if __name__ == '__main__':
 	# Start Up and initial setup
-	soundFolderPath = './sounds'
-	names = [filename for filename in listdir('sounds')]
+	names = [filename for filename in listdir(basepath + 'sounds')]
 	pygame.mixer.init()
 	playStartSound()
 
